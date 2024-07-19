@@ -16,24 +16,25 @@ Antes de começar, você precisará ter o Docker e o Docker Compose instalados e
    cd liberfly-api
     ```
     
-1. **Configure o .env**
-
-   O projeto já inclui um arquivo de exemplo .env.example. Copie este arquivo para criar um novo arquivo .env:
-   ```bash
-   cp .env.example .env
-   ```
-
-   Configure as variáveis de ambiente no arquivo .env conforme necessário. As configurações padrão devem funcionar para a maioria dos casos.
-
-3. **Construa e inicie os containers Docker**
+2. **Construa e inicie os containers Docker**
 
     Use o Docker Compose para construir e iniciar os containers:
 
     ```bash
-    docker-compose up -d
+    docker-compose up --build
     ```
 
     O comando acima construirá as imagens Docker e iniciará os serviços definidos no docker-compose.yml.
+
+3. **Clone o .env**
+
+   O projeto já inclui um arquivo de exemplo .env.example. Copie este arquivo para criar um novo arquivo .env:
+   ```bash
+   docker-compose exec app cp .env.example .env
+   ```
+
+   Configure as variáveis de ambiente no arquivo .env conforme necessário. As configurações padrão devem funcionar para a maioria dos casos.
+
 
 4. **Rode migrations e seeders**
     Rode as migrations e seeders para ter os dados necessarios
