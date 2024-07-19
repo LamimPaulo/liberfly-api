@@ -111,3 +111,11 @@ docker-compose down
 - o email e senha do placeholder no login é o usuario criado na seeder.
 - "docker-compose exec app bash" é o comando para entrar no container do laravel a qualquer momento
 - para mais informacões, duvidas, ou qualquer esclarecimento, entrar em contato pelo robertolamim@gmail.com ou contato@prlamim.com.br
+
+
+caso queira rodar sem o docker, deve-se seguir o processo padrao de uma aplicaćão laravel.
+
+- editar o .env
+- instalar dependencias do composer
+- dar permissoes para storage e bootstrap
+- servir com php artisan serve
